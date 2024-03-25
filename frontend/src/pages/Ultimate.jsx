@@ -1,6 +1,7 @@
 import React from "react";
 import basic from "../assets/basic.jpg";
 import ultimate_1 from "../assets/ultimate-1.jpg";
+import checkoutHandler from "../checkoutHandler";
 
 const Ultimate = () => {
   return (
@@ -55,15 +56,17 @@ const Ultimate = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">Rs.<span className="text-red-700">3000</span></p>
             </div>
-            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4">
+            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
+              onClick={()=>checkoutHandler(3000)}>
               Order Now
             </button>
           </div>
 
           <div className="bg-white my-5 rounded-lg py-10 lg:ml-6">
             <p className="font-bold">
-              <span className="text-red-700">1 Weeks</span> Plan
+              <span className="text-red-700">3 Months</span> Plan
             </p>
             <div className="leading-loose">
               <p>Freshly prepared meals</p>
@@ -71,15 +74,17 @@ const Ultimate = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">Rs.<span className="text-red-700">4300</span></p>
             </div>
-            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4">
+            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
+              onClick={()=>checkoutHandler(4300)}>
               Order Now
             </button>
           </div>
 
           <div className="bg-white my-5 rounded-lg py-10 lg:ml-6">
             <p className="font-bold">
-              <span className="text-red-700">1 Weeks</span> Plan
+              <span className="text-red-700">6 Months</span> Plan
             </p>
             <div className="leading-loose">
               <p>Freshly prepared meals</p>
@@ -87,8 +92,10 @@ const Ultimate = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">Rs.<span className="text-red-700">5000</span></p>
             </div>
-            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4">
+            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
+              onClick={()=>checkoutHandler(5000)}>
               Order Now
             </button>
           </div>

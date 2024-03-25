@@ -1,45 +1,9 @@
 import React from "react";
-import axios from "axios";
 import basic from "../assets/basic.jpg";
 import basic_1 from "../assets/basic-1.jpg";
+import checkoutHandler from "../checkoutHandler";
 
 const Basic = () => {
-  const checkoutHandler = async (amount) => {
-    const {
-      data: { key },
-    } = await axios.get("http://localhost:4000/getkey");
-
-    const {
-      data: { data },
-    } = await axios.post("http://localhost:4000/order", {
-      amount,
-    });
-
-    const options = {
-      key,
-      amount: data.amount,
-      currency: "INR",
-      name: "Fit Meals",
-      description: "Nutritious Culinary Delights",
-      image: "https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-black.png",
-      order_id: data.id,
-      callback_url: "http://localhost:3000/verify",
-      prefill: {
-        name: "Gaurav Kumar",
-        email: "gaurav.kumar@example.com",
-        contact: "9000090000",
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#7ad03a",
-      },
-    };
-
-    const razor = new window.Razorpay(options);
-    razor.open();
-  };
 
   return (
     <div>
@@ -98,6 +62,7 @@ const Basic = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">Rs.<span className="text-red-700">500</span></p>
             </div>
             <button
               className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
@@ -109,7 +74,7 @@ const Basic = () => {
 
           <div className="bg-white my-5 rounded-lg py-10 lg:ml-6">
             <p className="font-bold">
-              <span className="text-red-700">1 Weeks</span> Plan
+              <span className="text-red-700">1 Months</span> Plan
             </p>
             <div className="leading-loose">
               <p>Freshly prepared meals</p>
@@ -117,15 +82,17 @@ const Basic = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">Rs.<span className="text-red-700">1000</span></p>
             </div>
-            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4">
+            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
+              onClick={() => checkoutHandler(1000)}>
               Order Now
             </button>
           </div>
 
           <div className="bg-white my-5 rounded-lg py-10 lg:ml-6">
             <p className="font-bold">
-              <span className="text-red-700">1 Weeks</span> Plan
+              <span className="text-red-700">6 Months</span> Plan
             </p>
             <div className="leading-loose">
               <p>Freshly prepared meals</p>
@@ -133,8 +100,10 @@ const Basic = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">Rs.<span className="text-red-700">2000</span></p>
             </div>
-            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4">
+            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
+              onClick={() => checkoutHandler(2000)}>
               Order Now
             </button>
           </div>

@@ -1,15 +1,13 @@
 const express = require("express")
 const app = express();
+const cors = require("cors")
 require("dotenv").config();
 require("./db/connection");
-
-const userRouter = require("./router/userRouter");
-
-const cors = require("cors")
 
 app.use(cors());
 app.use(express.json());
 
+const userRouter = require("./router/userRouter");
 app.use(userRouter);
 
 app.get("/getkey",(req,res)=>{

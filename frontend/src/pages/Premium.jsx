@@ -1,6 +1,7 @@
 import React from "react";
 import primium_1 from "../assets/primium-1.jpg";
 import basic from "../assets/basic.jpg";
+import checkoutHandler from "../checkoutHandler";
 
 const Premium = () => {
   return (
@@ -58,15 +59,21 @@ const Premium = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">
+                Rs.<span className="text-red-700">1000</span>
+              </p>
             </div>
-            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4">
+            <button
+              className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
+              onClick={() => checkoutHandler(1000)}
+            >
               Order Now
             </button>
           </div>
 
           <div className="bg-white my-5 rounded-lg py-10 lg:ml-6">
             <p className="font-bold">
-              <span className="text-red-700">1 Weeks</span> Plan
+              <span className="text-red-700">1 Months</span> Plan
             </p>
             <div className="leading-loose">
               <p>Freshly prepared meals</p>
@@ -74,15 +81,21 @@ const Premium = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">
+                Rs.<span className="text-red-700">1400</span>
+              </p>
             </div>
-            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4">
+            <button
+              className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
+              onClick={() => checkoutHandler(1400)}
+            >
               Order Now
             </button>
           </div>
 
           <div className="bg-white my-5 rounded-lg py-10 lg:ml-6">
             <p className="font-bold">
-              <span className="text-red-700">1 Weeks</span> Plan
+              <span className="text-red-700">6 Months</span> Plan
             </p>
             <div className="leading-loose">
               <p>Freshly prepared meals</p>
@@ -90,8 +103,14 @@ const Premium = () => {
               <p>No refined sugars</p>
               <p>Planned by nutritionists</p>
               <p>Plan flexibility</p>
+              <p className="font-bold">
+                Rs.<span className="text-red-700">3000</span>
+              </p>
             </div>
-            <button className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4">
+            <button
+              className="bg-red-600 text-white p-3 px-6 rounded-xl mt-4"
+              onClick={() => checkoutHandler(3000)}
+            >
               Order Now
             </button>
           </div>

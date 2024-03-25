@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo-black.png";
+import logo from "../assets/logo-footer.png";
 
 const Footer = () => {
   return (
@@ -8,8 +8,7 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <p className="flex items-center justify-center">
-              <img src={logo} className="h-10 me-3" alt="FlowBite Logo" />
-              <span className="text-[17px]">Fitmeals™</span>
+              <img src={logo} className="h-12" alt="FlowBite Logo" />
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
